@@ -312,7 +312,8 @@ body {
   position: relative
 }
 .material-symbols-outlined {
-  font-size: 6.75rem
+  font-size: 108px;
+  color: #fff
 }
 .header {
   background: #44bcf7 url(../img/main.svg) center center/auto 100vh no-repeat;
@@ -349,10 +350,6 @@ body {
 }
 .header__title:not(:last-child) {
   margin-bottom: clamp(52px,52px + 45*(100vw - 375px)/1065,97px)
-}
-.header__icon {
-  font-size: 107.48px;
-  color: #fff
 }
 .footer {
   background: #90d4c6
