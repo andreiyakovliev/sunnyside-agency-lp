@@ -26,7 +26,7 @@
   content: ""
 }
 .material-symbols-outlined {
-  font-variation-settings: "FILL" 0,"wght" 400,"GRAD" 0,"opsz" 24
+  font-variation-settings: "FILL" 0,"wght" 400,"GRAD" 0,"opsz" 48
 }
 * {
   padding: 0;
@@ -350,6 +350,10 @@ body {
 }
 .header__title:not(:last-child) {
   margin-bottom: clamp(52px,52px + 45*(100vw - 375px)/1065,97px)
+}
+.header__icon {
+  font-size: 108px;
+  color: #fff
 }
 .footer {
   background: #90d4c6
