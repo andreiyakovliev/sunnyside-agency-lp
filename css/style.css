@@ -25,6 +25,9 @@
 ._icon-instagram:before {
   content: ""
 }
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0,"wght" 400,"GRAD" 0,"opsz" 24
+}
 * {
   padding: 0;
   margin: 0;
@@ -307,6 +310,9 @@ body {
 .button span {
   z-index: 3;
   position: relative
+}
+.material-symbols-outlined {
+  font-size: 6.75rem
 }
 .header {
   background: #44bcf7 url(../img/main.svg) center center/auto 100vh no-repeat;
