@@ -1,0 +1,159 @@
+.menu {
+	display: flex;
+	column-gap: 47px;
+
+	// .menu__icon
+	&__icon {}
+
+	// .menu__body
+	&__body {
+		justify-self: center;
+		align-self: center;
+
+		@media (max-width: $mobile) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: -100%;
+			overflow: auto;
+			padding: 106px 24px 0 24px;
+			transition: top 0.3s;
+
+
+			&::before {
+				content: "";
+				position: fixed;
+				width: 100%;
+				height: toRem(70);
+				left: 0;
+				top: -100%;
+				transition: top 0.3s;
+				z-index: 2;
+			}
+
+			.menu-open & {
+				top: 0;
+
+				&::before {
+					top: 0;
+				}
+			}
+		}
+	}
+
+	// .menu__list
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 47px;
+		position: relative;
+
+		li {
+			opacity: 1;
+
+			@media (any-hover: hover) {
+				&:hover {
+					opacity: 0.75;
+				}
+			}
+		}
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			background-color: #fff;
+			padding: 39px 95px;
+			row-gap: 32px;
+
+			li {
+				color: rgb(128, 131, 151);
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: -24px;
+				right: 0;
+				width: 0;
+				height: 0;
+				border-left: 24px solid transparent;
+				border-bottom: 24px solid #fff;
+			}
+		}
+
+		// .menu__item
+		&__item li {}
+
+		// .menu__link
+		&__link {
+
+
+
+			@media (max-width: $mobile) {
+				flex-direction: column;
+			}
+
+
+		}
+	}
+}
+
+//Burger Icon
+.icon-menu {
+	display: none;
+
+
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: toRem(24);
+		height: toRem(18);
+		z-index: 5;
+
+		@media (any-hover: none) {
+			cursor: default;
+		}
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			background-color: #fff;
+
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		span {
+			top: calc(50% - toRem(1));
+		}
+
+		.menu-open & {
+			opacity: 0.5;
+
+			&::before {
+				top: 0;
+			}
+
+			&::after {
+				bottom: 0;
+			}
+
+			span {
+				top: calc(50% - toRem(1));
+			}
+		}
+	}
+}

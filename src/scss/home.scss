@@ -1,0 +1,412 @@
+//====================================================================================================
+html {
+   scroll-behavior: smooth;
+}
+
+//=============== Content ===============//
+
+.page {
+
+   // .page__content
+   &__content {}
+}
+
+.content {
+
+   // .content__container
+   &__container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0;
+
+      grid-template-areas:
+         "item-content--1 content__image--1"
+         "content__image--2 item-content--2"
+         "content__image--3 content__image--4";
+   }
+
+   .item-content--1 {
+      grid-area: item-content--1;
+   }
+
+   .content__image--1 {
+      grid-area: content__image--1;
+   }
+
+   .content__image--2 {
+      grid-area: content__image--2;
+   }
+
+   .item-content--2 {
+      grid-area: item-content--2;
+   }
+
+   .content__image--3 {
+      grid-area: content__image--3;
+   }
+
+   .content__image--4 {
+      grid-area: content__image--4;
+   }
+
+   // .content__item
+   .content__item {
+      // padding: 9.8125rem 6.875rem 9.8125rem 10.3125rem;
+      // mobile: 4rem 1.5rem
+      padding: clamp(4rem, calc(4rem + (157 - 64) * ((100vw - 23.4375rem) / (1440 - 375))), 9.8125rem) clamp(1.5rem, calc(1.5rem + (110 - 24) * ((100vw - 23.4375rem) / (1440 - 375))), 6.875rem) clamp(4rem, calc(4rem + (157 - 64) * ((100vw - 23.4375rem) / (1440 - 375))), 9.8125rem) clamp(1.5rem, calc(1.5rem + (165 - 24) * ((100vw - 23.4375rem) / (1440 - 375))), 10.3125rem);
+
+      &:nth-child(4) {
+         // padding: 9.8125rem 10.3125rem 9.8125rem 6.875rem;
+         // mobile: 4rem 1.5rem
+         padding: clamp(4rem, calc(4rem + (157 - 64) * ((100vw - 23.4375rem) / (1440 - 375))), 9.8125rem) clamp(1.5rem, calc(1.5rem + (165 - 24) * ((100vw - 23.4375rem) / (1440 - 375))), 10.3125rem) clamp(4rem, calc(4rem + (157 - 64) * ((100vw - 23.4375rem) / (1440 - 375))), 9.8125rem) clamp(1.5rem, calc(1.5rem + (110 - 24) * ((100vw - 23.4375rem) / (1440 - 375))), 6.875rem);
+      }
+   }
+
+   // .content__image
+   &__image {}
+
+   // .content__img
+   &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
+.item-content {
+
+   // .item-content__title
+   &__title {
+      &:not(:last-child) {
+         margin-bottom: 2rem;
+      }
+   }
+
+   // .item-content__text
+   &__text {
+      &:not(:last-child) {
+         margin-bottom: 2.5rem;
+      }
+   }
+
+   // .item-content__link
+   &__link {
+      position: relative;
+      display: inline-block;
+      align-self: flex-start;
+      padding: 0 0.5rem;
+
+      &::before {
+         content: '';
+         position: absolute;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         height: 0.625rem;
+         border-radius: 1.75rem;
+         z-index: -1;
+         opacity: 0.25;
+         transition: opacity 0.3s ease;
+      }
+
+      // .item-content__link--yellow
+      &--yellow::before {
+         background-color: rgb(250, 212, 0);
+      }
+
+      // .item-content__link--pink
+      &--pink::before {
+         background-color: rgb(254, 119, 102);
+      }
+
+      @media (any-hover: hover) {
+         &:hover::before {
+            opacity: 1;
+         }
+      }
+   }
+
+   // .item-content__image
+   &__image {}
+
+   // .item-content__colorful
+   &__colorful {}
+}
+
+.colorful-item {
+   position: relative;
+
+   // .colorful-item__content
+
+   &__content {
+      position: absolute;
+      bottom: 9.833333%;
+      /* 59/600 */
+      left: 50%;
+      transform: translate(-50%, 0);
+      // max-width: 47.083333%;
+      // /* 339/720 */
+
+      width: clamp(20.4375rem, calc(20.4375rem + (329 - 327) * ((100vw - 23.4375rem) / (1440 - 375))), 20.5625rem);
+   }
+
+   // .colorful-item__title
+
+   &__title {
+      text-align: center;
+
+      &:not(:last-child) {
+         margin-bottom: 1.6875rem;
+      }
+   }
+
+   &__text {
+      text-align: center;
+   }
+
+   // .colorful-item__image
+
+   &__image {}
+}
+
+//=============== Testimonials ===============//
+.page {
+
+   // .page__testimonials
+
+   &__testimonials {}
+}
+
+.testimonials {
+
+   // .testimonials__container
+
+   &__container {
+      // padding: 10rem 10.3125rem; 
+      // mobile: padding: 4rem 1.5rem 5.375rem 1.5rem;
+
+      padding: clamp(4rem, calc(4rem + (160 - 64) * ((100vw - 23.4375rem) / (1440 - 375))), 10rem) clamp(1.5rem, calc(1.5rem + (165 - 24) * ((100vw - 23.4375rem) / (1440 - 375))), 10.3125rem) clamp(5.375rem, calc(5.375rem + (160 - 86) * ((100vw - 23.4375rem) / (1440 - 375))), 10rem) clamp(1.5rem, calc(1.5rem + (165 - 24) * ((100vw - 23.4375rem) / (1440 - 375))), 10.3125rem);
+   }
+
+   // .testimonials__title
+
+   &__title {
+      &:not(:last-child) {
+         // margin-bottom: 5.0625rem;
+         // mobile: 4rem;
+
+         margin-bottom: clamp(4rem, calc(4rem + (81 - 64) * ((100vw - 23.4375rem) / (1440 - 375))), 5.0625rem);
+      }
+   }
+
+   // .testimonials__items
+
+   &__items {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-content: stretch;
+      align-items: stretch;
+
+      gap: 1.875rem;
+
+   }
+
+   // .testimonials__item
+
+   &__item {
+      order: 0;
+      flex: 0 1 33.333%;
+      align-self: auto;
+   }
+
+
+}
+
+.item-testimonials {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   flex-wrap: wrap;
+
+   // .item-testimonials__image
+
+   &__image {
+      align-self: center;
+
+      img {
+         max-width: 100%;
+      }
+
+      &:not(:last-child) {
+         // margin-bottom: 3.625rem;
+         // mobile: margin-bottom: 2rem;
+
+         margin-bottom: clamp(2rem, calc(2rem + (58 - 32) * ((100vw - 23.4375rem) / (1440 - 375))), 3.625rem);
+      }
+   }
+
+   // .item-testimonials__text
+
+   &__text {
+      &:not(:last-child) {
+         // margin-bottom: 4.3125rem;
+         // mobile: margin-bottom: 2rem;
+
+         margin-bottom: clamp(2rem, calc(2rem + (69 - 32) * ((100vw - 23.4375rem) / (1440 - 375))), 4.3125rem);
+      }
+   }
+
+   // .item-testimonials__title
+
+   &__title {
+      &:not(:last-child) {
+         margin-bottom: 0.5625rem;
+      }
+   }
+
+   // .item-testimonials__position
+
+   &__position {}
+}
+
+//=============== Bitmap ===============//
+
+.page {
+
+   // .page__bitmap
+
+   &__bitmap {}
+}
+
+.bitmap {
+
+   // .bitmap__container
+
+   &__container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+   }
+
+   // .bitmap__image
+
+   &__image {
+      overflow: hidden;
+      // height: 27.9375rem;
+      height: 55.875vh;
+      /* 447/800 */
+      flex: 0 1 25%;
+
+      @media (max-width: $tablet) {
+         flex: 0 1 50%;
+         height: auto;
+      }
+
+      img {
+         object-fit: cover;
+         width: 100%;
+         height: 100%;
+
+         @media (any-hover: hover) {
+            &:hover {
+               transform: scale(1.1);
+            }
+         }
+      }
+   }
+}
+
+//=============== Media ===============//
+
+@media (max-width: $tablet) {
+
+   .content__container {
+      grid-template-columns: 1fr;
+
+      grid-template-areas: "content__image--1"
+         "item-content--1 "
+         "content__image--2"
+         "item-content--2"
+         "content__image--3"
+         "content__image--4";
+   }
+
+   .content__img {
+      height: 57.992vh;
+      /* 312/538 */
+      object-fit: cover;
+   }
+
+   .item-content h1,
+   h2,
+   h3,
+   h4,
+   .text,
+   .title {
+      text-align: center;
+   }
+
+   .item-content {
+      text-align: center;
+   }
+
+   .colorful-item__image {
+      height: 111.52vh;
+      /* 600/538 */
+   }
+
+   .testimonials__items {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: stretch;
+      align-items: stretch;
+   }
+
+   .testimonials__item {
+      flex: 1 1 33.333%;
+      align-self: auto;
+
+      &:nth-child(3) {
+         flex: 0 1 50%;
+      }
+   }
+}
+
+@media (max-width: toEm(849.98)) {
+   .testimonials__items {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: stretch;
+      align-items: stretch;
+   }
+
+   .testimonials__item {
+      flex: 1 1 33.333%;
+      align-self: auto;
+
+      &:nth-child(3) {
+         flex: 0 1 50%;
+      }
+   }
+}
+
+@media (max-width: toEm(599.98)) {
+   .testimonials__items {
+      display: block;
+   }
+
+   .testimonials__item {
+      &:not(:last-child) {
+         margin-bottom: 4rem;
+      }
+   }
+}
+
+//====================================================================================================
